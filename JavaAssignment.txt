@@ -1,0 +1,552 @@
+1. Write a program to copy the elements of one array into another array
+
+	import java.util.*;
+	public class ArrayDemo{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of the array: ");
+		int size = sc.nextInt();
+		int[] Arr = new int[size];
+		int[] newArray = new int[Arr.length];
+		System.out.println("Enter the elements of the array:");
+		for (int i=0;i<size;i++) {
+			Arr[i] = sc.nextInt();
+		}
+		for (int i = 0; i < size; i++) {
+            		newArray[i] = Arr[i];
+        	}
+		System.out.println("Elements of the new array:");
+		for (int i=0;i<newArray.length;i++) {
+    			System.out.print(newArray[i] + " ");
+		}
+	 }
+     }
+
+
+
+
+2. Write a program to array elements print all Even number
+
+	package com.exception;
+	import java.util.Scanner;
+	public class EvenNumArray {
+    		public static void main(String[] args) {
+        		Scanner sc = new Scanner(System.in);
+        		System.out.print("Enter the size of the array: ");
+        		int size = sc.nextInt();
+        		int[] arr = new int[size];
+        		System.out.println("Enter the elements of the array:");
+        		for (int i = 0; i < size; i++) {
+            			arr[i] = sc.nextInt();
+        		}
+        		System.out.println("Even numbers in the array:");
+        		for (int i = 0; i < arr.length; i++) {
+            			if (arr[i] % 2 == 0) {
+                			System.out.print(arr[i] + " ");
+            			}
+        		}
+    		}
+	}
+
+
+
+3. Write a program to array elements print all Odd number
+
+	package com.exception;
+	import java.util.Scanner;
+	public class OddNumArray {
+    		public static void main(String[] args) {
+        		Scanner sc = new Scanner(System.in);
+        		System.out.print("Enter the size of the array: ");
+        		int size = sc.nextInt();
+        		int[] arr = new int[size];
+        		System.out.println("Enter the elements of the array:");
+        		for (int i = 0; i < size; i++) {
+            			arr[i] = sc.nextInt();
+        		}
+        		System.out.println("Even numbers in the array:");
+        		for (int i = 0; i < arr.length; i++) {
+            			if (arr[i] % 2 != 0) {
+                			System.out.print(arr[i] + " ");
+            			}
+        		}
+    		}
+	}
+
+
+
+4. Write a program to search an element in an array
+
+import java.util.Scanner;
+public class SearchElement {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.print("Enter the element to search: ");
+        int element = sc.nextInt();
+        boolean searchele = false;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == element) {
+                System.out.println("Element " + element + " found at index " + i);
+                searchele = true;
+                break;
+            }
+        }
+        if (!searchele) {
+            System.out.println("Element " + element + " not found in the array.");
+        }
+    }
+}
+
+
+
+5. Write a program to array elements to print sum of Negative Numbers
+
+import java.util.Scanner;
+public class SumOfNegativeNumbers {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size=sc.nextInt();
+        int[] arr=new int[size];
+        System.out.println("Enter the elements of the array:");
+        for (int i=0;i<size;i++) {
+            arr[i]=sc.nextInt();
+        }
+        int sumOfNeg=0;
+        for (int i=0;i<arr.length;i++) {
+            if (arr[i]<0) {
+                sumOfNeg+=arr[i];
+            }
+        }
+        System.out.println("Sum of negative numbers: " +sumOfNeg);
+    }
+}
+
+
+
+6. Write a program to Print Unique Elements in Array
+
+
+import java.util.Scanner;
+public class UniqueEle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size = sc.nextInt();
+        int[] array = new int[size];
+        System.out.println("Enter elements of the array:");
+        for (int i = 0; i < size; i++) {
+            array[i] = sc.nextInt();
+        }
+        System.out.println("Unique elements in the array:");
+        boolean isUnique;
+        for (int i = 0; i < size; i++) {
+            isUnique = true;             
+		for (int j = 0; j < i; j++) {
+                if (array[i] == array[j]) { 
+                    isUnique = false; 
+                    break; 
+                }
+            }
+            if (isUnique) {
+                System.out.print(array[i] + " ");
+            }
+        }
+    }
+}
+
+
+
+7. Write a program to array elements print all Positive number
+
+import java.util.Scanner;
+public class PosNum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size = sc.nextInt();
+        int[] array = new int[size];
+        System.out.println("Enter elements of the array:");
+        for (int i = 0; i < size; i++) {
+            array[i] = sc.nextInt();
+        }
+        System.out.println("Positive numbers in the array:");
+        for (int i = 0; i < size; i++) {
+            if (array[i] > 0) { 
+                System.out.print(array[i] + " "); 
+            }
+        }
+    }
+}
+
+
+
+8. Write a program to calculate the average value of array elements
+
+public class AvArray {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        int sum = 0;
+        int count = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];  
+            count++;            
+        }
+        double average = (double) sum / count;
+        System.out.println("The average value of the array elements is: " + average);
+    }
+}
+
+
+
+9. Write a program in to find the sum of all elements of the array
+
+public class SumArray {
+    public static void main(String[] args) {
+        int[] array = {10, 15, 22, 33, 40, 55, 60, 73, 88};
+         int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];  // Accumulate the sum
+        }
+        System.out.println("The sum of all elements in the array is: " + sum);
+    }
+}
+
+
+10.Write a program to merge two arrays elements to store third array
+public class MergeArrays {
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array2 = {6, 7, 8, 9, 10};
+        int length1 = array1.length;
+        int length2 = array2.length;
+        int[] mergedArray = new int[length1 + length2];
+        for (int i = 0; i < length1; i++) {
+            mergedArray[i] = array1[i];
+        }
+        for (int j = 0; j < length2; j++) {
+            mergedArray[length1 + j] = array2[j];
+        }
+        System.out.print("Merged Array: ");
+        for (int k = 0; k < mergedArray.length; k++) {
+            System.out.print(mergedArray[k] + " ");
+        }
+    }
+}
+
+
+
+11.Write a program to get the canonical representation of the string object
+
+public class CanonicalString {
+    public static void main(String[] args) {
+ 
+        String s1 = "Hello";
+        String s2 = "Hello";
+        String s3 = new String("Hello");
+        String s4 = new String(“Hello”);
+        if (s == s2) {
+            System.out.println("s1 and s2 are the same (canonical) references.");
+        }
+       else {
+            System.out.println("s1 and s2 are different references.");
+        }
+        if (s3 == s4) {
+            System.out.println("s3 and s4 are the same references.");
+        } else {
+            System.out.println("s3 and s4 are different references.");
+}
+        s3 = s4;
+
+        if (s3 == s4) {
+            System.out.println("After assignment, str3 and str4 are now the same references.");
+        }
+    }
+}
+
+
+12.Write a program to check whether a given string ends with the contents of
+another string
+
+public class CheckEndsWith {
+    public static void main(String[] args) ;
+        String s1 = "HelloWorld";
+        String s2 = "World";
+        boolean endsWith = endsWithCustom(s1, s2);
+        if (endsWith) {
+            System.out.println("The string \"" + s1 + "\" ends with \"" + s2 + "\".");
+        } 
+      else {
+            System.out.println("The string \"" + s1 + "\" does not end with \"" + s2 + "\".");
+        }
+    }
+    public static boolean endsWithCustom(String s1, String s2) {
+        int len1 = str1.length();
+        int len2 = str2.length();
+       if (len2 > len1) {
+            return false;
+        }
+        for (int i = 0; i < len2; i++) {
+            if (str1.charAt(len1 - len2 + i) != str2.charAt(i)) {
+                return false;            }
+        }
+
+        return true;
+    }
+}
+
+
+
+13.Write a program to check whether two String objects contain the same data
+
+public class StringComparison {
+    public static void main(String[] args) {
+         String s1 = "HelloWorld";
+        String s2 = "HelloWorld";
+        
+        boolean areEqual = compareStrings(s1, s2);
+        
+                if (areEqual) {
+            System.out.println("The strings \"" + s1 + "\" and \"" + s2 + "\" contain the same data.");
+        } 
+              else {
+            System.out.println("The strings \"" + s1 + "\" and \"" + s2 + "\" do not contain the same data.");
+        }
+    }
+    public static boolean compareStrings(String str1, String str2) {
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+        for (int i = 0; i < str1.length(); i++) {
+            if (str1.charAt(i) != str2.charAt(i)) {
+                return false;              
+}
+        }
+
+                return true;
+    }
+
+}
+
+
+14.Write a program to count a number of Unicode code points in the specified
+text range of a String
+
+
+public class UnicodeCodePointCounter {
+    public static void main(String[] args) {
+        String str = "Hello𐍈World";         
+          int start = 0;
+        int end = str.length();          
+        int codePointCount = countUnicodeCodePoints(str, start, end);               System.out.println("The number of Unicode code points in the specified range: " + codePointCount);
+    }
+    public static int countUnicodeCodePoints(String str, int start, int end) {
+        int count = 0;
+        int i = start;
+
+        while (i < end) {
+            char ch = str.charAt(i);
+  if (i + 1 < end && isHighSurrogate(ch) && isLowSurrogate(str.charAt(i + 1))) 
+{                       
+   count++;
+    i += 2;             
+ }
+ else {
+                count++;
+                i++;
+            }
+        }
+
+        return count;
+    }
+
+        public static boolean isHighSurrogate(char ch) {
+        return ch >= 0xD800 && ch <= 0xDBFF;
+    }
+    public static boolean isLowSurrogate(char ch) {
+        return ch >= 0xDC00 && ch <= 0xDFFF;
+    }
+}
+
+
+15.Write a program to compare a given string to the specified character
+sequence
+
+import java.util.Scanner;
+public class CompareString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the main string: ");
+        String mainString = scanner.nextLine();
+        System.out.print("Enter the character sequence to compare: ");
+        String charSequence = scanner.nextLine();
+        boolean areEqual = compareStrings(mainString, charSequence);
+        if (areEqual) {
+            System.out.println("The main string is equal to the specified character sequence.");
+        } 
+      else {
+            System.out.println("The main string is NOT equal to the specified character sequence.");
+        }
+    }
+    public static boolean compareStrings(String str1, String str2) {
+        int length1 = 0;
+        int length2 = 0;
+        while (length1 < str1.length()) {
+            length1++;
+        }
+        while (length2 < str2.length()) {
+            length2++;
+        }
+        if (length1 != length2) {
+            return false;
+        }
+        for (int i = 0; i < length1; i++) {
+            if (str1.charAt(i) != str2.charAt(i)) {
+                return false; 
+            }
+        }
+        return true;     
+	}
+}
+
+
+
+16.Write a program to concatenate Two strings
+
+import java.util.Scanner;
+public class ConcatenateStrings {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first string: ");
+        String str1 = scanner.nextLine();
+        System.out.print("Enter the second string: ");
+        String str2 = scanner.nextLine();
+        int length1 = 0;
+        int length2 = 0;
+        while (str1.charAt(length1) != '\0' && length1 < str1.length()) {
+            length1++;
+        }
+        while (str2.charAt(length2) != '\0' && length2 < str2.length()) {
+            length2++;
+        }
+        char[] concatenated = new char[length1 + length2];
+        for (int i = 0; i < length1; i++) {
+            concatenated[i] = str1.charAt(i);
+        }
+        for (int i = 0; i < length2; i++) {
+            concatenated[length1 + i] = str2.charAt(i);
+        }
+        System.out.print("Concatenated string: ");
+        for (int i = 0; i < concatenated.length; i++) {
+            System.out.print(concatenated[i]);
+        }
+    }
+}
+
+
+17.Write a program to Count Number of Uppercase and Lowercase letters
+
+import java.util.Scanner;
+public class CountCaseLetters {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        int upperCaseCount = 0;
+        int lowerCaseCount = 0;
+        for (int i = 0; i < input.length(); i++) {
+            char currentChar = input.charAt(i);             
+            if (currentChar >= 'A' && currentChar <= 'Z') {
+                upperCaseCount++;
+            }
+            else if (currentChar >= 'a' && currentChar <= 'z') {
+                lowerCaseCount++;
+            }
+        }
+        System.out.println("Number of uppercase letters: " + upperCaseCount);
+        System.out.println("Number of lowercase letters: " + lowerCaseCount);
+    }
+}
+
+
+18.Write a program to create a character array containing the contents of a
+string
+
+public class CharArrayExample {
+    public static void main(String[] args) {
+        String input = "chrome";
+        char[] charArray = new char[6]; 
+        for (int i = 0; i < 6; i++) {
+            charArray[i] = input.charAt(i);
+        }
+        System.out.print("Character array contents: ");
+        for (int i = 0; i < charArray.length; i++) {
+            System.out.print(charArray[i] + " ");
+        }
+    }
+
+
+19.Write a program to find maximum between two string
+
+import java.util.Scanner;
+public class MaxString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first string: ");
+        String str1 = scanner.nextLine();
+        System.out.print("Enter the second string: ");
+        String str2 = scanner.nextLine();
+        String maxString = findMaxString(str1, str2);
+        System.out.println("The maximum string is: " + maxString);
+    }
+    public static String findMaxString(String str1, String str2) {
+        int i = 0;
+        while (i < str1.length() && i < str2.length()) {
+            if (str1.charAt(i) > str2.charAt(i)) {
+                return str1; // str1 is greater
+            } else if (str1.charAt(i) < str2.charAt(i)) {
+                return str2; // str2 is greater
+            }
+            i++;
+      }
+        if (str1.length() > str2.length()) {
+            return str1;
+        } else {
+            return str2;
+        }
+    }
+}
+
+
+
+20.Write a program to create a new string repeating every character twice of a
+given string
+
+import java.util.Scanner;
+public class RepeatCharacters {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in)
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+        String result = repeatCharacters(input);
+        System.out.println("Resulting string: " + result);
+        scanner.close();
+    }
+    public static String repeatCharacters(String str) {
+        StringBuilder repeatedString = new StringBuilder();
+        for (char c : str.toCharArray()) {
+            // Append the character twice
+            repeatedString.append(c).append(c);
+        }
+        return repeatedString.toString();
+    }
+}
+
+
